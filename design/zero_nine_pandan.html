@@ -8,7 +8,7 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: #ccc7bc;
+    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
   .label {
     width: 560px;
     height: 220px;
-    background: linear-gradient(to top right, #ffe8d6 0%, #fffdf8 55%);
+    background: linear-gradient(to top right, #ffb578 0%, #fffdf8 60%);
     border-radius: 18px;
     position: relative;
     overflow: hidden;
@@ -54,8 +54,8 @@
     display: block; margin-top: -14px; line-height: 1;
   }
   .tagline-small {
-    font-size: 8px; font-weight: 800; letter-spacing: 3px;
-    text-transform: uppercase; color: #1e1e1e; opacity: 0.35; margin-top: 4px;
+    font-size: 9px; font-weight: 800; letter-spacing: 3px;
+    text-transform: uppercase; color: #1e1e1e; opacity: 0.80; margin-top: 4px;
   }
   .deco-dots { position: absolute; top: 14px; left: 12px; display: flex; gap: 4px; }
   .deco-dot-h { width: 4px; height: 4px; border-radius: 50%; background: #e8521a; opacity: 0.28; }
@@ -85,7 +85,7 @@
     gap: 8px;
   }
   .flavor-badge {
-    background: #80ef80; color: #fffdf8;
+    background: #2c9835; color: #fffdf8;
     font-size: 10.5px; font-weight: 800;
     letter-spacing: 2px; text-transform: uppercase;
     padding: 5px 16px; border-radius: 20px;
@@ -100,15 +100,15 @@
   }
   .vol-text span { font-size: 12px; font-weight: 700; opacity: 0.45; letter-spacing: 1px; }
   .info-line {
-    font-size: 8px; font-weight: 900; letter-spacing: 1.5px;
-    text-transform: uppercase; color: #1e1e1e; opacity: 0.55;
+    font-size: 9px; font-weight: 900; letter-spacing: 1.5px;
+    text-transform: uppercase; color: #1e1e1e; opacity: 0.75;
     text-align: center;
   }
 
   .right-section {
     display: flex; flex-direction: column;
-    justify-content: flex-end; align-items: flex-end;
-    padding: 14px 14px 14px 10px;
+    justify-content: center; align-items: center;
+    padding: 10px 6px 10px 4px;
     flex-shrink: 0; position: relative; width: 115px;
   }
   .shake-tag {
@@ -117,13 +117,13 @@
     right: 0;
     background: #e8521a;
     color: #fff;
-    font-size: 8.5px; font-weight: 800; letter-spacing: 0.5px;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.5px;
     padding: 7px 18px 7px 14px;
     white-space: nowrap;
     z-index: 30;
     border-radius: 0 18px 0 8px;
   }
-  .shake-tag sup { font-size: 7px; vertical-align: super; }
+  .shake-tag sup { font-size: 9px; vertical-align: super; }
   .no-preserv {
     font-size: 8px; font-weight: 700; letter-spacing: 1px;
     text-transform: uppercase; color: #e8521a; opacity: 0.7;
@@ -143,13 +143,13 @@
 
   <!-- Flavor Badge -->
   <div class="center-section">
-    <div class="flavor-badge">Cappucino Cincau</div>
+    <div class="flavor-badge">Cocopandan Cincau</div>
     <div class="center-dots">
       <div class="center-dot"></div>
       <div class="center-dot active"></div>
       <div class="center-dot"></div>
     </div>
-    <div class="vol-text">250 <span>ML</span></div>
+    <div class="vol-text">250 ML</div>
     <div class="info-line">No Preservatives</div>
     <div class="info-line">No Artificial Color</div>
   </div>
@@ -253,17 +253,20 @@
 
   <div class="v-divider"></div>
 
-  <!-- Right -->
-  <div class="right-section">
-    <div class="no-preserv">Best Served<br>Chilled</div>
-    <div class="footnote">* Kocok sebelum diminum<br>Simpan di tempat sejuk</div>
+  <div class="right-section" style="justify-content: center; align-items: flex-start; padding: 14px 14px 14px 12px;">
+    <div style="display:flex; flex-direction:column; gap:6px;">
+      <div style="font-family:'Nunito',sans-serif; font-size:13px; font-weight:800; color:#1e1e1e; line-height:1.4;">
+        Best Served<br>Chilled
+      </div>
+      <div style="width:32px; height:2px; background:#e8521a; border-radius:2px;"></div>
+      <div style="font-family:'Nunito',sans-serif; font-size:10px; font-weight:600; color:#1e1e1e; opacity:0.80; line-height:1.5;">
+        * Kocok sebelum diminum, Simpan di tempat sejuk
+      </div>
+    </div>
   </div>
 
-  <div class="right-orange"></div>
-  <div class="right-stripe"></div>
-
   <!-- Shake tag: posisi absolut langsung di label, menyatu pojok kanan atas -->
-  <div class="shake-tag">Shake Before Drinking<sup>*</sup></div>
+  <div class="shake-tag">Shake Well<sup>*</sup></div>
 </div>
 
 </body>

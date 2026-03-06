@@ -8,14 +8,12 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: #ccc7bc;
+    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: 'Nunito', sans-serif;
-    gap: 40px;
-    flex-direction: column;
   }
 
   .label {
@@ -41,7 +39,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 18px 4px 18px 28px;
+    padding: 18px 10px 18px 28px;
     flex-shrink: 0;
     position: relative;
   }
@@ -56,8 +54,8 @@
     display: block; margin-top: -14px; line-height: 1;
   }
   .tagline-small {
-    font-size: 7px; font-weight: 800; letter-spacing: 3px;
-    text-transform: uppercase; color: #1e1e1e; opacity: 0.35; margin-top: 4px;
+    font-size: 9px; font-weight: 800; letter-spacing: 3px;
+    text-transform: uppercase; color: #1e1e1e; opacity: 0.80; margin-top: 4px;
   }
   .deco-dots { position: absolute; top: 14px; left: 12px; display: flex; gap: 4px; }
   .deco-dot-h { width: 4px; height: 4px; border-radius: 50%; background: #e8521a; opacity: 0.28; }
@@ -102,31 +100,39 @@
   }
   .vol-text span { font-size: 12px; font-weight: 700; opacity: 0.45; letter-spacing: 1px; }
   .info-line {
-    font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase; color: #1e1e1e; opacity: 0.35;
+    font-size: 9px; font-weight: 900; letter-spacing: 1.5px;
+    text-transform: uppercase; color: #1e1e1e; opacity: 0.75;
+    text-align: center;
   }
 
-  /* RIGHT SECTION dengan ilustrasi pisang bakar */
   .right-section {
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
     padding: 10px 6px 10px 4px;
     flex-shrink: 0; position: relative; width: 115px;
   }
-  svg.banana-illo { width: 100px; height: 185px; }
-
   .shake-tag {
     position: absolute;
-    top: 0; right: 0;
+    top: 0;
+    right: 0;
     background: #e8521a;
     color: #fff;
-    font-size: 8.5px; font-weight: 800; letter-spacing: 0.5px;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.5px;
     padding: 7px 18px 7px 14px;
     white-space: nowrap;
     z-index: 30;
     border-radius: 0 18px 0 8px;
   }
-  .shake-tag sup { font-size: 7px; vertical-align: super; }
+  .shake-tag sup { font-size: 9px; vertical-align: super; }
+  .no-preserv {
+    font-size: 8px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: #e8521a; opacity: 0.7;
+    text-align: right; margin-bottom: 4px;
+  }
+  .footnote {
+    font-size: 7px; color: #1e1e1e; opacity: 0.3;
+    font-style: italic; text-align: right; line-height: 1.4;
+  }
 </style>
 </head>
 <body>
@@ -206,7 +212,7 @@
 
   <div class="right-orange"></div>
   <div class="right-stripe"></div>
-  <div class="shake-tag">Best Served Warm/Hot<sup>*</sup></div>
+  <div class="shake-tag">Best When Warm/Hot<sup>*</sup></div>
 </div>
 
 </body>
