@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero Nine - Pandan</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #ccc7bc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .label {
+    width: 560px;
+    height: 220px;
+    background: linear-gradient(to top right, #ffe8d6 0%, #fffdf8 55%);
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .left-stripe  { width: 12px; background: #1e1e1e; flex-shrink: 0; }
+  .left-orange  { width: 6px;  background: #e8521a; flex-shrink: 0; }
+  .right-orange { width: 6px;  background: #e8521a; flex-shrink: 0; }
+  .right-stripe { width: 12px; background: #1e1e1e; flex-shrink: 0; }
+
+  .brand-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 18px 10px 18px 28px;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-zero {
+    font-family: 'Dancing Script', cursive;
+    font-size: 54px; color: #1e1e1e; line-height: 1; display: block;
+  }
+  .brand-nine-word {
+    font-family: 'Dancing Script', cursive;
+    font-size: 54px; color: #e8521a;
+    display: block; margin-top: -14px; line-height: 1;
+  }
+  .tagline-small {
+    font-size: 8px; font-weight: 800; letter-spacing: 3px;
+    text-transform: uppercase; color: #1e1e1e; opacity: 0.35; margin-top: 4px;
+  }
+  .deco-dots { position: absolute; top: 14px; left: 12px; display: flex; gap: 4px; }
+  .deco-dot-h { width: 4px; height: 4px; border-radius: 50%; background: #e8521a; opacity: 0.28; }
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px 8px 0px;
+    flex-shrink: 0;
+  }
+  svg.logo-icon { width: 90px; height: 180px; }
+
+  .v-divider {
+    width: 1.5px; background: #1e1e1e; opacity: 0.1;
+    margin: 20px 0; border-radius: 2px;
+    flex-shrink: 0; align-self: stretch;
+  }
+
+  .center-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 18px;
+    gap: 8px;
+  }
+  .flavor-badge {
+    background: #80ef80; color: #fffdf8;
+    font-size: 10.5px; font-weight: 800;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 16px; border-radius: 20px;
+    text-align: center;
+  }
+  .center-dots { display: flex; gap: 6px; align-items: center; }
+  .center-dot { width: 5px; height: 5px; border-radius: 50%; background: #e8521a; opacity: 0.28; }
+  .center-dot.active { opacity: 0.85; }
+  .vol-text {
+    font-size: 22px; font-weight: 800;
+    color: #1e1e1e; letter-spacing: -0.5px; line-height: 1;
+  }
+  .vol-text span { font-size: 12px; font-weight: 700; opacity: 0.45; letter-spacing: 1px; }
+  .info-line {
+    font-size: 8px; font-weight: 900; letter-spacing: 1.5px;
+    text-transform: uppercase; color: #1e1e1e; opacity: 0.55;
+    text-align: center;
+  }
+
+  .right-section {
+    display: flex; flex-direction: column;
+    justify-content: flex-end; align-items: flex-end;
+    padding: 14px 14px 14px 10px;
+    flex-shrink: 0; position: relative; width: 115px;
+  }
+  .shake-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #e8521a;
+    color: #fff;
+    font-size: 8.5px; font-weight: 800; letter-spacing: 0.5px;
+    padding: 7px 18px 7px 14px;
+    white-space: nowrap;
+    z-index: 30;
+    border-radius: 0 18px 0 8px;
+  }
+  .shake-tag sup { font-size: 7px; vertical-align: super; }
+  .no-preserv {
+    font-size: 8px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: #e8521a; opacity: 0.7;
+    text-align: right; margin-bottom: 4px;
+  }
+  .footnote {
+    font-size: 7px; color: #1e1e1e; opacity: 0.3;
+    font-style: italic; text-align: right; line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+<div class="label">
+  <div class="left-stripe"></div>
+  <div class="left-orange"></div>
+
+  <!-- Brand -->
+  <div class="brand-section">
+    <div class="deco-dots">
+      <div class="deco-dot-h"></div>
+      <div class="deco-dot-h"></div>
+      <div class="deco-dot-h"></div>
+    </div>
+    <div class="brand-text">
+      <span class="brand-zero">Zero</span>
+      <span class="brand-nine-word">Nine</span>
+    </div>
+    <div class="tagline-small">Original Blend</div>
+  </div>
+
+  <!-- Logo: gelas = kepala bulatan angka 9, ekor = lengkungan angka 9 -->
+  <div class="logo-section">
+    <!--
+      Strategi angka 9:
+      Angka 9 standar tipografi terdiri dari:
+      1. Lingkaran penuh di atas
+      2. Dari titik KANAN lingkaran, batang turun LURUS ke bawah
+         sejauh ±1.5x diameter, lalu TIDAK ada lekukan lagi — 
+         itulah angka 9 style sans-serif modern.
+      
+      Kita mapping ke gelas:
+      - Lingkaran (r=28) di tengah atas, cx=45 cy=35
+      - Titik kanan lingkaran: x=73, y=35
+      - Batang turun dari (73,35) ke (73,130) — lurus, tegas
+      - Ujung bawah batang diberi cap bulat
+
+      Gelas wajah lucu tetap di dalam lingkaran.
+      Straw dan cherry tetap ada.
+    -->
+    <svg class="logo-icon" viewBox="-18 0 118 155" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- === FILL ORANYE: hanya lingkaran kepala saja === -->
+      <circle cx="45" cy="35" r="27.5" fill="#e8521a"/>
+
+      <!-- === OUTLINE HITAM: lingkaran kepala === -->
+      <circle cx="45" cy="35" r="28" fill="none" stroke="#1e1e1e" stroke-width="3.8"/>
+
+      <!-- === OUTLINE HITAM: batang lurus === -->
+      <line x1="73" y1="34" x2="73" y2="108"
+            stroke="#1e1e1e" stroke-width="3.8" stroke-linecap="round"/>
+
+      <!-- === OUTLINE HITAM: ekor lengkung angka 9 === -->
+      <path d="M 73 108
+               C 73 125, 50 142, 30 133
+               C 14 126, 14 107, 26 100"
+            fill="none"
+            stroke="#1e1e1e"
+            stroke-width="3.8"
+            stroke-linecap="round"/>
+
+      <!-- shine lingkaran -->
+      <line x1="30" y1="22" x2="34" y2="44" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity="0.4"/>
+
+      <!-- ===== WAJAH LUCU ===== -->
+      <ellipse cx="36" cy="34" rx="4.2" ry="4.8" fill="#1e1e1e"/>
+      <circle cx="37.3" cy="32.3" r="1.4" fill="white"/>
+      <ellipse cx="54" cy="34" rx="4.2" ry="4.8" fill="#1e1e1e"/>
+      <circle cx="55.3" cy="32.3" r="1.4" fill="white"/>
+      <ellipse cx="29" cy="41" rx="4.2" ry="2.6" fill="#ff9a7a" opacity="0.7"/>
+      <ellipse cx="60" cy="41" rx="4.2" ry="2.6" fill="#ff9a7a" opacity="0.7"/>
+      <path d="M37 46 Q45 55 53 46" fill="none" stroke="#1e1e1e" stroke-width="2.2" stroke-linecap="round"/>
+      <rect x="41" y="46" width="8" height="5" rx="1.5" fill="white" stroke="#1e1e1e" stroke-width="0.9"/>
+
+      <!-- ===== STRAW (kanan atas) ===== -->
+      <line x1="62" y1="8" x2="55" y2="30" stroke="#1e1e1e" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="60.5" y1="14" x2="56.5" y2="26" stroke="#fffdf8" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+      <!--
+        CHERRY menggantung di sisi KIRI lingkaran:
+        Titik kiri lingkaran = cx-r = 45-28 = 17, cy=35
+        Tangkai cherry keluar dari sisi kiri (~17,25) mengarah ke kiri
+        Cherry menggantung di ujung tangkai
+      -->
+      <!-- tangkai cherry -->
+      <path d="M 17 28 Q 4 18 -4 26" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round"/>
+      <!-- daun -->
+      <ellipse cx="2" cy="17" rx="5.5" ry="3" fill="#4a9e5c" stroke="#1e1e1e" stroke-width="1.1" transform="rotate(-20,2,17)"/>
+      <!-- buah cherry -->
+      <circle cx="-5" cy="32" r="10" fill="#d62828" stroke="#1e1e1e" stroke-width="2.2"/>
+      <circle cx="-8" cy="28" r="2.8" fill="white" opacity="0.35"/>
+
+      <!-- ===== BINTANG / SPARKLES ===== -->
+      <!-- kanan atas -->
+      <text x="78" y="18" font-size="11" fill="#ffd166" opacity="0.75">✦</text>
+      <!-- kanan tengah -->
+      <text x="82" y="72" font-size="8" fill="#e8521a" opacity="0.55">✦</text>
+      <!-- bawah kiri ekor -->
+      <text x="18" y="148" font-size="9" fill="#ffd166" opacity="0.55">✦</text>
+    </svg>
+  </div>
+
+  <div class="v-divider"></div>
+
+  <!-- Center -->
+  <div class="center-section">
+    <div class="flavor-badge">Cocopandan Cincau</div>
+    <div class="center-dots">
+      <div class="center-dot"></div>
+      <div class="center-dot active"></div>
+      <div class="center-dot"></div>
+    </div>
+    <div class="vol-text">250 <span>ML</span></div>
+    <div class="info-line">No Preservatives</div>
+    <div class="info-line">No Artificial Color</div>
+  </div>
+
+  <div class="v-divider"></div>
+
+  <!-- Right -->
+  <div class="right-section">
+    <div class="no-preserv">Best Served<br>Chilled</div>
+    <div class="footnote">* Kocok sebelum diminum<br>Simpan di tempat sejuk</div>
+  </div>
+
+  <div class="right-orange"></div>
+  <div class="right-stripe"></div>
+
+  <!-- Shake tag: posisi absolut langsung di label, menyatu pojok kanan atas -->
+  <div class="shake-tag">Shake Before Drinking<sup>*</sup></div>
+</div>
+
+</body>
+</html>
